@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Pacifico&display=swap');
+:root{
+	--yellow: #FEA116;
+	--light: #F1F8FF;
+	--dark: #0F172B;
+}
+.btn-primary{
+	background: var(--yellow) !important;
+	border-color: var(--yellow) !important;
+	border-radius: 2px;
+}
+.text-primary{
+	color: var(--yellow) !important;
+}
+.border-primary{
+	border-color: var(--yellow) !important;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Heebo', sans-serif;
+	color: #666565;
+}
+h1{
+	font-family: 'Nunito', sans-serif;
+	color: var(--dark);
+	font-weight: 800;
+}
+// -------------------navbar start----------------
+.navbar{
+	text-transform: uppercase;
+	width: 100%;
+	font-weight: 500;
+	font-size: 15px;
+	background: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	&.hardened-top{
+		position: fixed;
+		top: 0;
+		background-color: var(--dark);
+		z-index: 999;
+		.nav-link{
+			padding: 20px 0 !important;
+		}
+	}
+	.nav-link{
+		padding: 35px 0 !important;
+		margin-left: 25px;
+		color: var(--light);
+		&:hover{
+			color: var(--yellow);
+		}
+		&.active{
+			color: var(--yellow);
+		}
+	}
+	.dropdown-menu{
+		text-transform: capitalize;
+		border-radius: 2px;
+	}
+	h1{
+		font-family: 'Nunito', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-transform: capitalize;
+		color: var(--yellow);
+
+
+	}
+}
+// -----------------------------navbar end----------------
+// -----------------------------heade start----------------
+
+.heade{
+	background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(./images/bg-hero.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.animation{
+		animation: rotate 50s linear infinite;
+	}
+	h1{
+		font-size: 64px;
+		font-family: "Nunito",sans-serif;
+		font-weight: 800;
+	}
+	.link{
+		color: var(--yellow);
+		text-decoration: none;
+		&:hover{
+			color: #cb8112;
+		}
+	}
+}
+// -----------------------------heade end----------------
+// ------------------------------service comp start----------
+.service-comp{
+	.service-item{
+		box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+		border-radius: 2px;
+		&:hover{
+			background: var(--yellow);
+			color: white;
+			i,h5{
+				color: white !important;
+			}
+		}
+	}
+	h5{
+		color: #0F172B;
+		font-weight: 800;
+		font-family: "Nunito",sans-serif;
+	}
+}
+
+// ------------------------------information comp start----------
+.info{
+	.col-lg-6{
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		margin-top: 1rem;
+	}
+	h6{
+		color: var(--dark);
+		font-weight: 800;
+	}
+	.display-5{
+		font-weight: 800;
+	}
+	.img-low{
+		margin-top: 25%;
+	}
+	.about-title{
+		font-family: 'Pacifico', cursive;
+		position: relative;
+		display: inline-block;
+		&::after{
+			position: absolute;
+			content: '';
+			width: 45px;
+			height: 2px;
+			top: 50%;
+			right: -55px;
+			margin-top: -1px;
+			background: var(--yellow);
+		}
+	}
+}
+// ------------------------------information comp end----------
+
+// ------------------------------foodMenu comp start----------
+.foodMenu{
+	h5.title{
+		font-family: 'Pacifico', cursive;
+		position: relative;
+		display: inline-block;
+		&:before{
+			position: absolute;
+			content: "";
+			width: 45px;
+			height: 2px;
+			top: 50%;
+			left: -55px;
+			margin-top: -1px;
+			background: var(--yellow);
+		}
+		&::after{
+			position: absolute;
+			content: "";
+			width: 45px;
+			height: 2px;
+			top: 50%;
+			right: -55px;
+			margin-top: -1px;
+			background: var(--yellow);
+		}
+	}
+	h6{
+		font-weight: 800;
+	}
+	.tab{
+		color: var(--dark);
+	}
+	.nav-link{
+		border: none;
+		&.active{
+			border-bottom: 2px solid var(--yellow);
+		}
+	}
+	.nav-tabs{
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+	img{
+		width: 80px;
+	}
+	.tab-content{
+		h5{
+			font-weight: 800;
+			color: var(--dark);
+			font-family: "Nunito",sans-serif;
+		}
+		small{
+			font-style: italic;
+		}
+	}
+}
+// ------------------------------foodMenu comp end----------
+// ------------------------------reservation comp start----------
+.reservation{
+	.video{
+		position: relative;
+    height: 100%;
+    min-height: 500px;
+    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(./images/video.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.btn-play{
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    padding: 18px 20px 18px 28px;
+		span{
+			display: block;
+			position: relative;
+			z-index: 3;
+			width: 0;
+			height: 0;
+			border-left: 32px solid var(--dark);
+			border-top: 22px solid transparent;
+			border-bottom: 22px solid transparent;
+			&::before{
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				display: block;
+				width: 100px;
+				height: 100px;
+				background: var(--yellow   );
+				border-radius: 50%;
+				animation: pulse-border 1500ms ease-out infinite;
+			}
+			&::after{
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				display: block;
+				width: 100px;
+				height: 100px;
+				background: var(--yellow   );
+				border-radius: 50%;
+				transition: all 200ms;
+			}
+		}
+	}
+}
+// ------------------------------reservation comp end----------
+
+@keyframes rotate {
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
